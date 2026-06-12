@@ -4,7 +4,7 @@
   "description": "its calc. I am developed his on my phone.",
   "main": "index.js",
   "scripts": {
-    "start": 
+    "start": "electron . --no-sandbox"
   },
   "author": "Efim Tim",
   "license": "ISC",
