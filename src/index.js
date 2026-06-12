@@ -4,6 +4,7 @@ function createWindow() {
   const win = browserWindow({
     width: 400,
     height: 500,
+    resizable: false
   });
   win.setMenuBarVisibility(false);
   win.setTitle("Калькулятор");

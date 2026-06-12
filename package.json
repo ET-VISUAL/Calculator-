@@ -9,6 +9,7 @@
   "author": "Efim Tim",
   "license": "ISC",
   "dependencies": {
-    "electron": "^42.4.0"
+    "electron": "^42.4.0",
+    "make": "^0.8.1"
   }
 }

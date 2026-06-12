@@ -1,0 +1,58 @@
+body {
+  background-image: linear-gradient(rgb(0, 0, 0), 60%, #0c1216);
+  user-select: none;
+  margin: 0;
+}
+
+p {
+  text-align: right;
+  word-break: break-all;
+  font-family: "Times New Roman", Times, serif;
+  width: 88%;
+  padding: 3vh, 8%, 0 4%;
+}
+
+#input {
+  height: 12vh;
+  width: 10vh;
+  color: chartreuse;
+}
+
+#output {
+  height: 4vh;
+  font-size: 8vh;
+  color: #fff;
+}
+
+#btn-block {
+  margin-left: 3%;
+}
+
+button {
+  width: 20%;
+  margin: 2%;
+  float: left;
+  font-size: 7vh;
+  background-color: rgba(0, 0, 0, 0);
+  color: #ffffff;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  padding: 2vh 0;
+}
+
+button:active {
+  background-color: dimgrey;
+}
+
+.operation {
+  background-color: #121b22;
+}
+
+.clear {
+  color: lightcoral;
+}
+
+.calculate {
+  background-color: aqua;
+}
