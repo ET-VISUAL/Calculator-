@@ -1,0 +1,123 @@
+<body>
+  <p id="input">0</p>
+  <p id="output">0</p>
+  <div id="btn-block">
+    <button onclick="addNum(1)">1</button>
+    <button onclick="addNum(2)">2</button>
+    <button onclick="addNum(3)">3</button>
+    <button onclick='addChar("*")' class="char">x</button>
+    <button onclick="addNum(4)">4</button>
+    <button onclick="addNum(5)">5</button>
+    <button onclick="addNum(6)">6</button>
+    <button onclick='addChar("+")' class="char">+</button>
+    <button onclick="addNum(7)">7</button>
+    <button onclick="addNum(8)">8</button>
+    <button onclick="addNum(9)">9</button>
+    <button onclick='addChar("-")' class="char">-</button>
+    <button onclick="clr()" class="clear">C</button>
+    <button onclick="addNum(0)">0</button>
+    <button onclick="calcInput()" class="calculate">=</button>
+    <button onclick='addChar("/")' class="char">/</button>
+  </div>
+
+  <style>
+    body {
+      background-image: linear-gradient(black, 60%, #0c1216);
+      user-select: none;
+      margin: 0;
+    }
+
+    p {
+      text-align: right;
+      word-break: break-all;
+      font-family: "Times New Roman", Times, serif;
+      width: 88%;
+      padding: 3vh, 8%, 0 4%;
+    }
+
+    #input {
+      height: 12vh;
+      width: 10vh;
+      color: chartreuse;
+    }
+
+    #output {
+      height: 4vh;
+      font-size: 8vh;
+      color: #fff;
+    }
+
+    #btn-block {
+      margin-left: 3%;
+    }
+
+    button {
+      width: 20%;
+      margin: 2%;
+      float: left;
+      font-size: 7vh;
+      background-color: rgba(0, 0, 0, 0);
+      color: #ffffff;
+      border-radius: 50%;
+      border: none;
+      outline: none;
+      padding: 2vh 0;
+    }
+
+    button:active {
+      background-color: dimgrey;
+    }
+
+    .operation {
+      background-color: #0a9c51;
+    }
+
+    .clear {
+      color: lightcoral;
+    }
+
+    .calculate {
+      background-color: aqua;
+    }
+  </style>
+
+  <script>
+    let input = window.document.querySelector("#input");
+    let output = window.document.querySelector("#output");
+    let isLastChar = false;
+
+    function add(value) {
+      if (input.innerText <= 8) {
+        if (input.innerText === "0") {
+          input.innerText = value;
+        } else {
+          input.innerText += value;
+        }
+      }
+    }
+
+    function addNum(num) {
+      add(num);
+      isLastOperation = false;
+      calcOutput();
+    }
+
+    function addChar(char) {
+      if (!isLastChar) add(char);
+      isLastChar = true;
+    }
+
+    function calcInput() {
+      input.innerText = output.innerText;
+    }
+
+    function calcOutput() {
+      output.innerText = eval(input.innerText);
+    }
+
+    function clr() {
+      input.innerText = "0";
+      output.innerText = "0";
+    }
+  </script>
+</body>
